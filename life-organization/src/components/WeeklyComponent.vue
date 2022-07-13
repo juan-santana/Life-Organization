@@ -155,8 +155,8 @@
 
 import axios from 'axios';
 
-const baseurltask = "http://localhost:3000/Task"
-const baseurlShoppingList = "http://localhost:3000/Shoppinglist"
+const baseurltask = "https://json-server-life-organization.herokuapp.com/task"
+const baseurlShoppingList = "https://json-server-life-organization.herokuapp.com/shoppinglist"
 
 
 
@@ -183,7 +183,7 @@ export default {
                 this.Tareas = res.data;
                 const res1 = await axios.get(baseurlShoppingList);
                 this.shoppingList = res1.data;
-
+                
             } catch (error) {
                 console.log(error);
             }
@@ -229,7 +229,7 @@ export default {
             */
             else {
 
-                const res = await axios.put("http://localhost:3000/Task/" + index, { title: this.tarea });
+                const res = await axios.put("https://json-server-life-organization.herokuapp.com/task/" + index, { title: this.tarea });
                 this.tarea = res.data.title;
                 this.display = true;
                 this.tarea = ''
@@ -248,7 +248,7 @@ export default {
             */
             else {
 
-                const res = await axios.put("http://localhost:3000/Shoppinglist/" + index, { title: this.tarea });
+                const res = await axios.put("https://json-server-life-organization.herokuapp.com/shoppinglist/" + index, { title: this.tarea });
                 this.tarea = res.data.title;
                 this.display = true;
                 this.tarea = ''
@@ -257,11 +257,11 @@ export default {
         },
         // metodo para borrar el item selecionado y obtenemos nuevamente los datos del api
         async deletTask(Index) {
-            await axios.delete("http://localhost:3000/Task/" + Index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/task/" + Index)
             this.obtenerdatos()
         },
         async deletTaskShopping(Index) {
-            await axios.delete("http://localhost:3000/Shoppinglist/" + Index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/shoppinglist/" + Index)
             this.obtenerdatos()
         },
         // metodo para las ventanas si seteando el tab clickeado y asignandoselo a activeTab

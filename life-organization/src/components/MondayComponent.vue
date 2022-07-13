@@ -179,13 +179,13 @@
 
 <script>
 import axios from 'axios'
-const baseurlList = "http://localhost:3000/LunesWeek"
-const baseurlMartes = "http://localhost:3000/MartesWeek"
-const baseurlMiercoles = "http://localhost:3000/MiercolesWeek"
-const baseurlJueves = "http://localhost:3000/JuevesWeek"
-const baseurlViernes = "http://localhost:3000/ViernesWeek"
-const baseurlSabado = "http://localhost:3000/SabadoWeek"
-const baseurlDomingo = "http://localhost:3000/DomingoWeek"
+const baseurlList = "https://json-server-life-organization.herokuapp.com/LunesWeek"
+const baseurlMartes = "https://json-server-life-organization.herokuapp.com/MartesWeek"
+const baseurlMiercoles = "https://json-server-life-organization.herokuapp.com/MiercolesWeek"
+const baseurlJueves = "https://json-server-life-organization.herokuapp.com/JuevesWeek"
+const baseurlViernes = "https://json-server-life-organization.herokuapp.com/ViernesWeek"
+const baseurlSabado = "https://json-server-life-organization.herokuapp.com/SabadoWeek"
+const baseurlDomingo = "https://json-server-life-organization.herokuapp.com/DomingoWeek"
 
 export default {
     name: "MondayComponent",
@@ -297,36 +297,36 @@ export default {
             }
         },
         async borrartarea(index) {
-            await axios.delete("http://localhost:3000/LunesWeek/" + index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/LunesWeek/" + index)
             this.obtenerdatos()
         },
         async borrartareamartes(index) {
-            await axios.delete("http://localhost:3000/MartesWeek/" + index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/MartesWeek/" + index)
             this.obtenerdatos()
         }
         ,
         async borrartareamiercoles(index) {
-            await axios.delete("http://localhost:3000/MiercolesWeek/" + index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/MiercolesWeek/" + index)
             this.obtenerdatos()
         }
         ,
         async borrartarajueves(index) {
-            await axios.delete("http://localhost:3000/JuevesWeek/" + index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/JuevesWeek/" + index)
             this.obtenerdatos()
         }
         ,
         async borrartaraviernes(index) {
-            await axios.delete("http://localhost:3000/ViernesWeek/" + index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/ViernesWeek/" + index)
             this.obtenerdatos()
         }
         ,
         async borrartarasabado(index) {
-            await axios.delete("http://localhost:3000/SabadoWeek/" + index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/SabadoWeek/" + index)
             this.obtenerdatos()
         }
         ,
         async borrartaradomingo(index) {
-            await axios.delete("http://localhost:3000/DomingoWeek/" + index)
+            await axios.delete("https://json-server-life-organization.herokuapp.com/DomingoWeek/" + index)
             this.obtenerdatos()
         }
     },

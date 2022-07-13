@@ -72,7 +72,7 @@
 <script>
 
 import axios from 'axios'
-const baseurlList = "http://localhost:3000/Listas"
+const baseurlList = "https://json-server-life-organization.herokuapp.com/Listas"
 
 
 export default {
@@ -115,7 +115,7 @@ export default {
       */
       else {
 
-        const res = await axios.put("http://localhost:3000/Listas/" + index, { title: this.tarea });
+        const res = await axios.put("https://json-server-life-organization.herokuapp.com/Listas/" + index, { title: this.tarea });
         this.tarea = res.data.title;
         this.display = true;
         this.tarea = ''
@@ -131,7 +131,7 @@ export default {
     },
 
     async deletTask(Index) {
-      await axios.delete("http://localhost:3000/Listas/" + Index)
+      await axios.delete("https://json-server-life-organization.herokuapp.com/Listas/" + Index)
       
       this.obtenerdatos()
     },
